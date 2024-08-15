@@ -1,0 +1,7 @@
+streamlit
+streamlit_option_menu
+requests
+base64
+pandas==2.2.2
+numpy==2.0.1
+pip==24.2
