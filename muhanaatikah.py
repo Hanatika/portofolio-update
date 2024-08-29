@@ -43,7 +43,7 @@ st.markdown(
             <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG8.png" alt="LinkedIn Logo" style="width:26px;">
         </a>
         <a href="https://drive.google.com/file/d/1ebJxPhrG_4tHVPygpbthi66fz6GkDaz7/view?usp=sharing" target="_blank">
-            <button style="background-color:White; padding: 3px 10px; border-radius: 5px; border: none; color: black; font-size: 16px;">
+            <button style="background-color:#93CAED; padding: 3px 10px; border-radius: 5px; border: none; color: black; font-size: 16px;">
                 Resume
             </button>
         </a>
@@ -75,44 +75,60 @@ if selected == 'About':
 
     st.write('---')
     
+    # CSS untuk membuat teks di dalam kolom berada di tengah
+    st.markdown(
+        """
+        <style>
+        .center-text {
+            text-align: center;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-    # Experience & Skills Section
+    # Menggunakan columns dengan pengaturan kolom proporsional
     with st.container():
-        col3 = st.columns([1])[0] 
+        col1, col3, col2 = st.columns([1, 2, 1])
         with col3:
+            st.markdown('<div class="center-text">', unsafe_allow_html=True)
             st.markdown("## 🎓 Education")
-
+            st.write("""
+            **Formal Education**
+            
+            - Diploma IV - Business Statistics (2022 - 2024)
+            - Diploma III - Statistics (2018 - 2021)
+            """)
 
             st.write("""
-                    **Formal Education**
+            **Non-Formal Education**
+            
+            - Bootcamp Data Science by Rakamin Academy (7 Months)
+            - Data Analytics Academy by Coding Studio (3 Months)
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
 
-
-                    - Diploma IV - Business Statistics (2022 - 2024)
-                    - Diploma III - Statistics (2018 - 2021)""")
-                
-            st.write("""
-                    **Non-Formal Education**
-                    - Bootcamp Data Science by Rakamin Academy (7 Months)
-                    - Data Analytics Academy by Coding Studio (3 Months)
-                    """)
     with st.container():
-        col4 = st.columns([1])[0]
+        col1, col4, col2 = st.columns([1, 2, 1])
         with col4:
-            st.markdown("## 📑Skills")
+            st.markdown('<div class="center-text">', unsafe_allow_html=True)
+            st.markdown("## 📋 Skills")
             st.write("""
-                    - **Data Analysis :** Data Collection, Data Cleaning, Data Preprocessing, Exploratory Data Analysis (EDA), Descriptive Statistics, Correlation Analysis, Regression Analysis, and Sentiment Analysis etc.
-                    - **Programming Languages :** Python, SQL, R
-                    - **Tools :** Looker Studio, Google Collaboratory/Jupiter, R Studio, Excel/Spreadsheet, SPSS
-                    - **Databases :** PostgreSQL, MySQL
-                    """)
+            - **Data Analysis:** Data Collection, Data Cleaning, Data Preprocessing, Exploratory Data Analysis (EDA), Descriptive Statistics
+            - **Programming Languages:** Python, SQL, R
+            - **Tools:** Looker Studio, Google Colaboratory/Jupyter, R Studio, Excel/Spreadsheet, SPSS
+            - **Databases:** PostgreSQL, MySQL
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+
     with st.container():
-        col5 = st.columns([1])[0]   
+        col1, col5, col2 = st.columns([1,2,1])   
         with col5:
             st.markdown("## ✒️Experience")
             st.write("""
-                    - HRGA Analyst - Internship
-                    - Data Collection - Freelance
-                    """)
+                        - HRGA Analyst - Internship
+                        - Data Collection - Freelance
+                        """)
 
 if selected == 'Projects':
     with st.container():
