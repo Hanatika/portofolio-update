@@ -3,7 +3,7 @@ import base64
 from streamlit_option_menu import option_menu
 import requests
 
-st.set_page_config(page_icon='🧕', layout='wide', initial_sidebar_state="auto")
+st.set_page_config(page_icon='🧕', initial_sidebar_state="auto")
 # Menyisipkan CSS untuk memaksa light mode
 st.markdown(
     """
@@ -30,8 +30,7 @@ st.markdown(
 
 st.title("Muhana Atikah")
 st.write("""
-        _Undergrad of Business Statistics at Sepuluh Nopember Institute of Technology_,
-        who is interested in the field of data and having 1,5 years experience in data quantitative/data analyst""")
+        Graduated from Business Statistics at Sepuluh Nopember Institute of Technology who is interested in the field of data and having 1 year experience in data quantitative/data analyst""")
     
 # Tombol "Contact Me" yang mengarahkan ke bagian kontak di bawah
 st.markdown(
@@ -70,7 +69,7 @@ if selected == 'About':
         with col2:
             st.write('#')
             st.subheader('Hi There, I am Tika')
-            st.title('Undergrad at ITS')
+            st.title('Business Statistics ITS')
             
 
 
@@ -79,7 +78,7 @@ if selected == 'About':
 
     # Experience & Skills Section
     with st.container():
-        col3, col4, col5 = st.columns([1.3 ,1.4, 1]) 
+        col3 = st.columns([1])[0] 
         with col3:
             st.markdown("## 🎓 Education")
 
@@ -96,7 +95,8 @@ if selected == 'About':
                     - Bootcamp Data Science by Rakamin Academy (7 Months)
                     - Data Analytics Academy by Coding Studio (3 Months)
                     """)
-            
+    with st.container():
+        col4 = st.columns([1])[0]
         with col4:
             st.markdown("## 📑Skills")
             st.write("""
@@ -105,7 +105,8 @@ if selected == 'About':
                     - **Tools :** Looker Studio, Google Collaboratory/Jupiter, R Studio, Excel/Spreadsheet, SPSS
                     - **Databases :** PostgreSQL, MySQL
                     """)
-            
+    with st.container():
+        col5 = st.columns([1])[0]   
         with col5:
             st.markdown("## ✒️Experience")
             st.write("""
