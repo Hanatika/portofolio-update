@@ -3,7 +3,7 @@ import base64
 from streamlit_option_menu import option_menu
 import requests
 
-st.set_page_config(page_icon='🧕', initial_sidebar_state="auto")
+st.set_page_config(page_icon='🧕', layout= 'wide', initial_sidebar_state="auto")
 # Menyisipkan CSS untuk memaksa light mode
 st.markdown(
     """
