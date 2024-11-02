@@ -30,7 +30,7 @@ st.markdown(
 
 st.title("Muhana Atikah")
 st.write("""
-        Graduated from Business Statistics at Sepuluh Nopember Institute of Technology who is interested in the field of data and having 1 year experience in data quantitative/data analyst""")
+         A dedicated with majoring in Business Statistics and strong skills in data analysis gained through data science projects from courses and bootcamps. Demonstrates strong analytical thinking and the ability to draw applicable insights to drive organizational progress""")
     
 # Tombol "Contact Me" yang mengarahkan ke bagian kontak di bawah
 st.markdown(
